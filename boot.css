@@ -1,0 +1,12 @@
+body {
+    background-color: #f0f0f0; /* Change this to your preferred color */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 10px; /* Adjust this to change the space between grid items */
+}
+
+.grid-item {
+    background-color: #fff; /* Change this to your preferred color */
+    border: 1px solid #ddd; /* This creates the grid lines */
+    padding: 20px; /* Adjust this to change the padding inside grid items */
+}
