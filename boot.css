@@ -1,17 +1,30 @@
+:root {
+    --background-color: #f0f0f0;
+    --grid-item-background-color: #fff;
+    --grid-item-border-color: #ddd;
+    --grid-item-shadow-color: rgba(0,0,0,0.1);
+}
+
 body {
-    background-color: #f0f0f0; /* Change this to your preferred color */
+    background-color: var(--background-color);
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 10px; /* Adjust this to change the space between grid items */
+    grid-gap: 10px; /* Space between grid items */
 }
 
 .grid-item {
-    background-color: #fff; /* Change this to your preferred color */
-    border: 1px solid #ddd; /* This creates the grid lines */
-    padding: 20px; /* Adjust this to change the padding inside grid items */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Adds subtle shadow to grid items */
-    transition: transform 0.2s; /* Smooth transition for hover effects */
+    background-color: var(--grid-item-background-color);
+    border: 1px solid var(--grid-item-border-color);
+    padding: 20px;
+    box-shadow: 0 2px 5px var(--grid-item-shadow-color);
+    transition: transform 0.2s; /* Smooth scaling transition */
     &:hover {
-        transform: scale(1.05); /* Slightly enlarges the grid item on hover */
+        transform: scale(1.05); /* Enlarge grid items on hover */
     }
+}
+
+/* Accessibility: Focus styles for keyboard navigation */
+.grid-item:focus {
+    outline: 3px solid blue;
+    outline-offset: 2px;
 }
